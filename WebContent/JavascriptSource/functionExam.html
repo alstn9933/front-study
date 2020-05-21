@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!-- saved from url=(0232)http://192.168.10.96:18080/%ea%b3%b5%ec%9c%a0%ed%8f%b4%eb%8d%94/06_javascript/1.%20%ed%95%a8%ec%88%98%20%ec%8b%a4%ec%8a%b5%28%ea%b2%80%ec%83%89%ed%95%a0%20%ed%95%ad%eb%aa%a9%ec%97%90%20%eb%94%b0%eb%a5%b8%20%eb%b3%80%ed%99%94%29.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Insert title here</title>
+  <style type="text/css">
+	fieldset {  		
+		width: 400px;		
+		text-align: center;
+		background: #dbdbdb;
+	}
+	div.box {
+		width: 500px;	
+		height: 50px;
+			
+		margin: 10px;
+		padding: 10px;
+		background: #ffcc00;
+		display: none;
+	}
+
+  </style>
+</head>
+<body>
+	<h2>연습 3</h2>
+    <p>Hint 함수 호출 시 매개변수로 this를 보내면 호출한 엘리먼트가 전송</p>
+    <p>자바스크립트에서 엘리먼트.checked를 하면 라디오박스 선택시 true/선택이 안된경우 false를 리턴</p>
+	<fieldset>
+		<legend>검색할 항목을 선택하세요.</legend>
+		<input type="radio" name="category" value="title" id="title" onclick="Hint();"><label for="title">제목</label>&nbsp; &nbsp; 
+		<input type="radio" name="category" value="date" id="date" onclick="Hint();"><label for="date">날짜</label>&nbsp; &nbsp; 
+		<input type="radio" name="category" value="writer" id="writer" onclick="Hint();"><label for="writer">작성자</label>&nbsp; &nbsp;
+		<br>힌트 : display 속성을 이용<br>
+	</fieldset>
+	<hr>
+	<div id="titleBox" class="box">
+		<form method="post" action="#">
+			<label> 검색할 제목을 입력하세요 : </label>
+			<br> 
+			<input type="search" name="title" size="50"> &nbsp;
+			<input type="submit" value="검색">
+		</form>
+	</div>
+	<div id="dateBox" class="box">
+		<form method="post" action="#">
+			<label> 검색할 날짜를 선택하세요 : </label>
+			<br>
+			<input type="date" name="start"> - 
+			<input type="date" name="end"> &nbsp; 
+			<input type="submit" value="검색">
+		</form>
+	</div>
+	<div id="writerBox" class="box">
+		<form method="post" action="#">
+			<label> 검색할 작성자 아이디를 입력하세요 : </label>
+			<br>
+			<input type="search" name="writer" size="25"> &nbsp; 
+			<input type="submit" value="검색">
+		</form>
+	</div>
+	<script type="text/javascript">
+	//요구한 내용을 변수, 연산자, 제어문 등을 사용하여 실행되게 하시오.
+	//제목 체크시, titleBox 만 보여지게
+	//날짜 체크시, dateBox 만 보여지게
+	//작성자 체크시, writerBox 만 보여지게 함
+        function Hint(){
+            var cat = document.getElementsByName("category");
+            for(var i=0; i<cat.length; i++){
+                var str = cat[i].value+"Box";
+                var box = document.getElementById(str);
+                if(cat[i].checked){
+                    box.style.display="block";
+                }else{
+                    box.style.display="none";
+                }
+            }
+        }
+		
+  	</script>
+
+</body></html>

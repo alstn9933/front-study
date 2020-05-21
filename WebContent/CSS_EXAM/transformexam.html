@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <style>
+        .div1 {
+            width: 400px;
+            height: 300px;
+            border: 1px solid black;
+            padding: 10px;
+            display: inline-block;
+        }
+
+        .div1:hover {
+            animation-name: an;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes an {
+            100% {
+                margin: 100px;
+                box-shadow: 7px 7px 5px gray;
+                transform: rotate(15deg);
+            }
+        }
+
+        .div2 {
+            height: 200px;
+        }
+
+        .div3 {
+            color: green;
+            text-align: center;
+            height: 100px;
+            font-weight: 600;
+            line-height: 100px;
+        }
+
+        .img1 {
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+        }
+
+        .gallary {
+            margin: auto;
+            width: 400px;
+            height: 300px;
+            border: 5px solid black;
+        }
+
+        .d {
+            width: 50%;
+            height: 50%;
+            float: left;
+            position: relative;
+        }
+
+        .img {
+            width: 200px;
+            height: 150px;
+        }
+
+        .zoom {
+            width: 400px;
+            height: 300px;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            z-index: 100;
+            display: none;
+        }
+
+        .d:hover>.zoom {
+            display: block;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="div1">
+        <div class="div2">
+            <img class="img1" src="../imgs/%EA%B3%A0%EC%96%91%EC%9D%B4.jpg">
+        </div>
+        <div class="div3">
+            고양이
+        </div>
+    </div>
+    <hr>
+    <hr>
+
+    <h2>사진 갤러리 만들기</h2>
+    <hr>
+
+    <div class="gallary">
+        <div class="d">
+            <img class="img" src="../imgs/flower1.PNG">
+            <img class="zoom" src="../imgs/flower1.PNG">
+        </div>
+        <div class="d">
+            <img class="img" src="../imgs/%EC%83%A4%EC%83%A4%EC%83%A4.gif">
+            <img class="zoom" src="../imgs/%EC%83%A4%EC%83%A4%EC%83%A4.gif">
+        </div>
+        <div class="d">
+            <img class="img" src="../imgs/sana.gif">
+            <img class="zoom" src="../imgs/sana.gif">
+        </div>
+        <div class="d">
+            <img class="img" src="../imgs/dog.jpg">
+            <img class="zoom" src="../imgs/dog.jpg">
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <style>
+        .wrapper {
+            width: 1280px;
+            margin: 0 auto;
+            background-color: #1A2026;
+        }
+
+        .wrapper div {
+            box-sizing: border-box;
+        }
+
+        .header {
+            overflow: hidden;
+            background-color: #1A2026;
+        }
+
+        .header>div {
+            float: left;
+            height: 150px;
+            overflow: hidden;
+        }
+
+        .hleft {
+            width: 10%;
+        }
+
+        .hleft>img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .hcenter {
+            width: 70%;
+        }
+
+        .pagename {
+            height: 100px;
+        }
+
+        .pagename>h1 {
+            text-align: center;
+            line-height: 100px;
+            margin: 0px;
+            font-size: 400%;
+            color: aliceblue;
+            text-shadow: 3px 3px 3px #4D9AE1;
+        }
+
+        .menu {
+            height: 50px;
+        }
+
+        .menu>ul {
+            width: 100%;
+            list-style: none;
+            padding: 0;
+            margin: 0 auto;
+            height: 50px;
+        }
+
+        .menu>ul>li {
+            width: calc(100%/4);
+            float: left;
+        }
+
+        .menu>ul>li>a {
+            border: 2px solid aliceblue;
+            box-sizing: border-box;
+            text-align: center;
+            display: block;
+            height: 50px;
+            line-height: 50px;
+            text-decoration: none;
+            color: aliceblue;
+            text-shadow: 3px 3px 3px #4D9AE1;
+            font-weight: bold;
+            border-bottom: none;
+        }
+
+        .menu>ul>li:first-child>a {
+            border-top-left-radius: 10px;
+        }
+
+        .menu>ul>li:last-child>a {
+            border-top-right-radius: 10px;
+        }
+
+        .menu>ul>li:hover>a {
+            background-color: red;
+        }
+
+        .hright {
+            width: 20%;
+        }
+
+        .hright>a {
+            display: block;
+            width: 80%;
+            height: 40px;
+            border: 2px solid aliceblue;
+            color: aliceblue;
+            text-shadow: 1px 1px 1px #4D9AE1;
+            text-align: center;
+            line-height: 40px;
+            margin: 20px;
+            border-radius: 5px;
+            box-shadow: 1px 1px 1px #4D9AE1;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .content {
+            overflow: hidden;
+            background-color: aliceblue;
+        }
+
+        .content>div {
+            float: left;
+        }
+
+        .leftcon {
+            width: 20%;
+        }
+
+        .sidemenu>ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidemenu>ul>li>a {
+            width: 100%;
+            display: block;
+            height: 50px;
+            background-color: aliceblue;
+            text-align: center;
+            text-decoration: none;
+            line-height: 50px;
+            color: black;
+            font-weight: bold;
+        }
+
+        .sidemenu>ul>li:hover>a {
+            background-color: #65AEAF;
+        }
+
+        .ad {
+            background-color: white;
+        }
+
+        .ad>img {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .ad>p {
+            height: 20px;
+            margin-top: 5px;
+            text-align: center;
+        }
+
+        .content1 {
+            width: 60%;
+            background-color: aliceblue;
+        }
+
+        .modify {
+            width: 20%;
+            margin-left: 90%;
+            margin-top: 20px;
+        }
+
+        .modify>a {
+            display: inline-block;
+            width: 40px;
+            height: 25px;
+            text-align: center;
+            line-height: 25px;
+            text-decoration: none;
+            background-color: cadetblue;
+            border-radius: 5px;
+        }
+
+        .content2 {
+            margin-left: 20px;
+            width: 100%;
+        }
+
+        .content2 tr {
+            height: 50px;
+        }
+        .content2 tr:nth-child(3){
+            height: 20px;
+        }
+
+        .content2 tr>td {
+            border-bottom: 1px solid #D5EBFF;
+            text-align: right;
+            font-size: 10px;
+        }
+
+        .content tr>td:first-child {
+            text-align: left;
+            width: 70%;
+            font-size: 13px;
+        }
+        .coment {
+            margin-left: 20px;
+            width: 100%;
+        }
+        .writecoment{
+            margin-top: 20px;
+        }
+        .writecoment>input {
+            width: 5%;
+            height: 30px;
+            line-height: 30px;
+        }
+
+        .writecoment>textarea {
+            width: 90%;
+            height: 50px;
+            resize: none;
+        }
+        .coment>input{
+            display: none;
+        }
+        .coment>label {
+            font-size: 12px;
+            color: gray;
+        }
+        .coment>input:checked+label+.coments{
+            display: block;
+        }
+        .coments {
+            width: 100%;
+            display: none;
+        }
+
+        .coments tr {
+            height: 60px;
+        }
+
+        .coments tr>td:first-child {
+            width: 100px;
+        }
+        .coment tr>td:nth-child(2){
+            width: 600px;
+        }
+        .coments tr>td:last-child {
+            width: 150px;
+            text-align: right;
+        }
+
+        .coments tr>td {
+            border-bottom: 1px solid #D5EBFF;
+            font-size: 10px;
+        }
+
+        .footer {
+            height: 150px;
+            overflow: hidden;
+        }
+
+        .footer>p {
+            color: aliceblue;
+            text-shadow: 1px 1px 1px #4D9AE1;
+            margin: 0;
+            text-align: center;
+            line-height: 150px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="hleft"><img src="../WebContent/imgs/dora.png"></div>
+            <div class="hcenter">
+                <div class="pagename">
+                    <h1>Welcom To Lee's World</h1>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">JAVA</a></li>
+                        <li><a href="#">ORACLE</a></li>
+                        <li><a href="#">HTML/CSS3</a></li>
+                        <li><a href="#">게시판</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="hright">
+                <a href="CSS_EXAM/css_login.html">로그인</a>
+                <a href="signuppage.html">회원가입</a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="leftcon">
+                <div class="sidemenu">
+                    <ul>
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">자유게시판</a></li>
+                        <li><a href="#">사진게시판</a></li>
+                    </ul>
+                </div>
+                <div class="ad">
+                    <img src="imgs/ad1.jpg">
+                    <p>광고는 처음이지</p>
+                    <img src="imgs/ad2.jpg">
+                    <p>광고 4딸라</p>
+                </div>
+            </div>
+            <div class="content1">
+                <div class="modify">
+                    <a href="#">수정</a>
+                    <a href="#">삭제</a>
+                </div>
+                <table class="content2">
+                    <tr>
+                        <td>hihihi</td>
+                        <td>조회수:20</td>
+                        <td>200401-11:10</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">관리자</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"></td>
+                        <td><a href="#">첨부파일</a></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <p>
+1. 동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세 2. 남산위에 저 소나무 철갑을 두른듯 바람서리 불변함은 우리 기상일세 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세 3. 가을 하늘 공활한데 높고 구름없이 밝은 달은 우리 가슴 일편단심일세 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세 4. 이 기상과 이 맘으로 충성을 다하여 괴로우나 즐거우나 나라 사랑하세 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+                <div class="coment">
+                    <form action="#" method="get">
+                        <div class="writecoment">
+                            <textarea name="coment" placeholder="댓글입력"></textarea>
+                            <input type="submit" value="등록">
+                        </div>
+                    </form>
+                    <input type="checkbox" id="coments"><label for="coments">댓글 20</label>
+                    <table class="coments">
+                        <tr>
+                            <td>유저1</td>
+                            <td>
+                                <pre>봉쥬르!</pre>
+                            </td>
+                            <td>200401-12:03</td>
+                        </tr>
+                        <tr>
+                            <td>유저2</td>
+                            <td>
+                                <pre>봉쥬르!</pre>
+                            </td>
+                            <td>200401-12:04</td>
+                        </tr>
+                        <tr>
+                            <td>유저3</td>
+                            <td>
+                                <pre>봉쥬르!</pre>
+                            </td>
+                            <td>200401-12:05</td>
+                        </tr>
+                        <tr>
+                            <td>유저4</td>
+                            <td>
+                                <pre>봉쥬르!</pre>
+                            </td>
+                            <td>200401-12:06</td>
+                        </tr>
+                        <tr>
+                            <td>유저5</td>
+                            <td>
+                                <pre>봉쥬르!</pre>
+                            </td>
+                            <td>200401-12:07</td>
+                        </tr>
+                        <tr>
+                            <td>유저6</td>
+                            <td>
+                                <pre>봉쥬르!</pre>
+                            </td>
+                            <td>200401-12:08</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p>COPYRIGHT ⓒ Lee's Cooperation</p>
+        </div>
+    </div>
+</body>
+
+</html>

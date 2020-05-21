@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!-- saved from url=(0191)http://192.168.10.96:18080/%ea%b3%b5%ec%9c%a0%ed%8f%b4%eb%8d%94/06_javascript/3.%20%ea%b0%84%ec%9d%b4%20%ea%b3%84%ec%82%b0%ea%b8%b0%20%eb%a7%8c%eb%93%a4%ea%b8%b0%20-%20%eb%ac%b8%ec%a0%9c.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Insert title here</title>
+</head>
+
+<body>
+	<h2>간이 계산기 만들기</h2>	
+       
+	첫번째 값 : <input id="num1"><br>
+	두번째 값 : <input id="num2"><br>
+    <button onclick="calc('+');">+</button>
+    <button onclick="calc('-');">-</button>
+    <button onclick="calc('*');">*</button>
+    <button onclick="calc('/');">/</button>
+    <button onclick="calc('%');">%</button>
+	<br><br>
+    계산결과 : <span id="calc"></span>
+    
+   <hr>
+   <script>
+        /*var num1 = document.getElementById("num1");
+        var num2 = document.getElementById("num2");
+        var result = document.getElementById("calc"); 
+       
+        function add(){
+            result.innerHTML = Number(num1.value)+Number(num2.value);
+        }
+        function sub(){
+            result.innerHTML = num1.value-num2.value;
+        }
+        function mul(){
+            result.innerHTML = num1.value*num2.value;
+        }
+        function div1(){
+            result.innerHTML = num1.value/num2.value;
+        }
+        function div2(){
+            result.innerHTML = num1.value%num2.value;
+        }*/
+       
+       function calc(oper){
+            var num1 = document.getElementById("num1");
+            var num2 = document.getElementById("num2");
+            var calc = document.getElementById("calc"); 
+            var result =0;
+           switch(oper){
+                case '+' : result = Number(num1.value)+Number(num2.value);
+            break;
+                   case '-' : result = Number(num1.value)-Number(num2.value);
+            break;
+                   case '*' : result = Number(num1.value)*Number(num2.value);
+            break;
+                   case '/' : result = Number(num1.value)/Number(num2.value);
+            break;
+                   case '%' : result = Number(num1.value)%Number(num2.value);
+            break;
+           }
+           calc.innerHTML = result;
+       }
+    </script>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

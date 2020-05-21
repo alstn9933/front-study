@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!-- saved from url=(0221)http://192.168.10.96:18080/%ea%b3%b5%ec%9c%a0%ed%8f%b4%eb%8d%94/06_javascript/dom%ec%8b%a4%ec%8a%b5/1.%20%ed%9a%8c%ec%9b%90%20%ec%9e%85%eb%a0%a5%20%ed%85%8c%ec%9d%b4%eb%b8%94%20%ec%9e%90%eb%8f%99%20%ec%83%9d%ec%84%b1.html -->
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Insert title here</title>
+    <script>
+        function add() {
+            var name = prompt("이름 입력");
+            var age = prompt("나이 입력");
+            var addr = prompt("주소 입력");
+            var Arr = [name,age,addr];
+            var tr = document.createElement("tr");
+            for (var i = 0; i < 3; i++) {
+                var td = document.createElement("td");
+                var text = document.createTextNode(Arr[i]);
+                td.appendChild(text);
+                tr.appendChild(td);
+            }
+            var member = document.getElementById("member");
+            member.appendChild(tr);
+        }
+    </script>
+</head>
+
+<body>
+    <style>
+        #div1 {
+            border: 5px solid black;
+            height: 800px;
+            width: 1000px;
+        }
+
+    </style>
+    <center>
+        문제1. 추가 버튼을 클릭하면 이름,나이,주소를 입력 받은 후 테이블에 추가하도록 하여라.
+        <table border="1" id="member">
+            <tbody>
+                <tr>
+                    <th>이름</th>
+                    <th>나이</th>
+                    <th>주소</th>
+                </tr>
+            </tbody>
+        </table>
+
+        <button onclick="add();">추가</button>
+    </center>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

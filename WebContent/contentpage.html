@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <style>
+        .wrapper {
+            width: 1280px;
+            margin: 0 auto;
+            background-color: #1A2026;
+        }
+
+        .wrapper div {
+            box-sizing: border-box;
+        }
+
+        .header {
+            overflow: hidden;
+            background-color: #1A2026;
+        }
+
+        .header>div {
+            float: left;
+            height: 150px;
+            overflow: hidden;
+        }
+
+        .hleft {
+            width: 10%;
+        }
+
+        .hleft>img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .hcenter {
+            width: 70%;
+        }
+
+        .pagename {
+            height: 100px;
+        }
+
+        .pagename>h1 {
+            text-align: center;
+            line-height: 100px;
+            margin: 0px;
+            font-size: 400%;
+            color: aliceblue;
+            text-shadow: 3px 3px 3px #4D9AE1;
+        }
+
+        .menu {
+            height: 50px;
+        }
+
+        .menu>ul {
+            width: 100%;
+            list-style: none;
+            padding: 0;
+            margin: 0 auto;
+            height: 50px;
+        }
+
+        .menu>ul>li {
+            width: calc(100%/4);
+            float: left;
+        }
+
+        .menu>ul>li>a {
+            border: 2px solid aliceblue;
+            box-sizing: border-box;
+            text-align: center;
+            display: block;
+            height: 50px;
+            line-height: 50px;
+            text-decoration: none;
+            color: aliceblue;
+            text-shadow: 3px 3px 3px #4D9AE1;
+            font-weight: bold;
+            border-bottom: none;
+        }
+
+        .menu>ul>li:first-child>a {
+            border-top-left-radius: 10px;
+        }
+
+        .menu>ul>li:last-child>a {
+            border-top-right-radius: 10px;
+        }
+
+        .menu>ul>li:hover>a {
+            background-color: red;
+        }
+
+        .hright {
+            width: 20%;
+        }
+
+        .hright>a {
+            display: block;
+            width: 80%;
+            height: 40px;
+            border: 2px solid aliceblue;
+            color: aliceblue;
+            text-shadow: 1px 1px 1px #4D9AE1;
+            text-align: center;
+            line-height: 40px;
+            margin: 20px;
+            border-radius: 5px;
+            box-shadow: 1px 1px 1px #4D9AE1;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .content {
+            overflow: hidden;
+            background-color: white;
+        }
+
+        .content>div {
+            float: left;
+        }
+
+        .leftcon {
+            width: 20%;
+        }
+
+        .sidemenu>ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidemenu>ul>li>a {
+            width: 100%;
+            display: block;
+            height: 50px;
+            background-color: aliceblue;
+            text-align: center;
+            text-decoration: none;
+            line-height: 50px;
+            color: black;
+            font-weight: bold;
+        }
+
+        .sidemenu>ul>li:hover>a {
+            background-color: #65AEAF;
+        }
+
+        .ad {
+            background-color: white;
+        }
+
+        .ad>img {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .ad>p {
+            height: 20px;
+            margin-top: 5px;
+            text-align: center;
+        }
+
+        .content1 {
+            width: 80%;
+            background-color: aliceblue;
+        }
+        .content1>div{
+            border: 1px solid gray;
+        }
+        .topcon{
+            margin-top: 10px;
+        }
+        .topcon>a{
+            display: block;
+            width: 50px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            margin: 0;
+            margin-left: 90%;
+            background-color: #65AEAF;
+            color: white;
+            text-decoration: none;
+        }
+        .contable{
+            margin: 0 auto;
+            width: 90%;
+        }
+        .contable tr{
+            height: 40px;
+        }
+        .contable tr>th:nth-child(1){
+            width: 10%;
+        }
+        .contable tr>th:nth-child(2){
+            width: 50%;
+        }
+        .contable tr>th:nth-child(2)>a{
+            text-decoration: none;
+            color: black;
+        }
+        .contable tr>th:nth-child(3){
+            width: 20%;
+        }
+        .contable tr>th:nth-child(4){
+            width: 10%;
+        }.contable tr>th:nth-child(5){
+            width: 10%;
+        }
+        .contable tr:first-child>th{
+            background-color: black;
+            color: white;
+        }
+        .pageno{
+            width: 350px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .pageno>a:first-child{
+            background-color: #65AEAF;
+        }
+        .pageno>a{
+            float: left;
+            border: 1px solid gray;
+            width: calc(350px/12);
+            text-align: center;
+            line-height: 25px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            color: black;
+            text-decoration: none;
+        }
+        .searchcon{
+            width: 40%;
+            height: 70px;
+            margin: 0 auto;
+        }
+        .searchcon>input{
+            padding: 0;
+            border: 1px solid black;
+            height: 30px;
+            box-sizing: border-box;
+            margin-top: 15px;
+        }
+        .searchcon>select{
+            width: 100px;
+            padding: 0;
+            border: 1px solid black;
+            height: 30px;
+            box-sizing: border-box;
+            margin-top: 15px;
+        }
+        .searchcon>input:fisrt-child{
+            width: 150px;
+        }
+        .searchcon>input:last-child{
+            height: 30px;
+            width: 50px;
+            background-color: #65AEAF;
+            color: white;
+            border: none;
+        }
+        .footer {
+            height: 150px;
+            overflow: hidden;
+        }
+
+        .footer>p {
+            color: aliceblue;
+            text-shadow: 1px 1px 1px #4D9AE1;
+            margin: 0;
+            text-align: center;
+            line-height: 150px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="hleft"><img src="../WebContent/imgs/dora.png"></div>
+            <div class="hcenter">
+                <div class="pagename">
+                    <h1>Welcom To Lee's World</h1>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">JAVA</a></li>
+                        <li><a href="#">ORACLE</a></li>
+                        <li><a href="#">HTML/CSS3</a></li>
+                        <li><a href="#">게시판</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="hright">
+                <a href="CSS_EXAM/css_login.html">로그인</a>
+                <a href="signuppage.html">회원가입</a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="leftcon">
+                <div class="sidemenu">
+                    <ul>
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">자유게시판</a></li>
+                        <li><a href="#">사진게시판</a></li>
+                    </ul>
+                </div>
+                <div class="ad">
+                    <img src="imgs/ad1.jpg">
+                    <p>광고는 처음이지</p>
+                    <img src="imgs/ad2.jpg">
+                    <p>광고 4딸라</p>
+                </div>
+            </div>
+            <div class="content1">
+                <div class="topcon">
+                    <a href="#">글쓰기</a>
+                    <table class="contable">
+                        <tr>
+                            <th>번호</th>
+                            <th>제목</th>
+                            <th>글쓴이</th>
+                            <th>날짜</th>
+                            <th>조회수</th>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <th><a href="#">hihihi[20]</a></th>
+                            <th>관리자</th>
+                            <th>03-01</th>
+                            <th>24</th>
+                        </tr>
+                        <tr>
+                            <th>2</th>
+                            <th><a href="#">hihihi[20]</a></th>
+                            <th>관리자</th>
+                            <th>03-01</th>
+                            <th>24</th>
+                        </tr>
+                        <tr>
+                            <th>3</th>
+                            <th><a href="#">hihihi[20]</a></th>
+                            <th>관리자</th>
+                            <th>03-01</th>
+                            <th>24</th>
+                        </tr>
+                        <tr>
+                            <th>4</th>
+                            <th><a href="#">hihihi[20]</a></th>
+                            <th>관리자</th>
+                            <th>03-01</th>
+                            <th>24</th>
+                        </tr>
+                        <tr>
+                            <th>5</th>
+                            <th><a href="#">hihihi[20]</a></th>
+                            <th>관리자</th>
+                            <th>03-01</th>
+                            <th>24</th>
+                        </tr>
+                        <tr>
+                            <th>6</th>
+                            <th><a href="#">hihihi[20]</a></th>
+                            <th>관리자</th>
+                            <th>03-01</th>
+                            <th>24</th>
+                        </tr>
+                        <tr>
+                            <th>7</th>
+                            <th><a href="#">hihihi[20]</a></th>
+                            <th>관리자</th>
+                            <th>03-01</th>
+                            <th>24</th>
+                        </tr>
+                        <tr>
+                            <th>8</th>
+                            <th><a href="#">hihihi[20]</a></th>
+                            <th>관리자</th>
+                            <th>03-01</th>
+                            <th>24</th>
+                        </tr>
+                        <tr>
+                            <th>9</th>
+                            <th><a href="#">hihihi[20]</a></th>
+                            <th>관리자</th>
+                            <th>03-01</th>
+                            <th>24</th>
+                        </tr>
+                        <tr>
+                            <th>10</th>
+                            <th><a href="#">hihihi[20]</a></th>
+                            <th>관리자</th>
+                            <th>03-01</th>
+                            <th>24</th>
+                        </tr>
+                        <tr>
+                            <th>11</th>
+                            <th><a href="#">hihihi[20]</a></th>
+                            <th>관리자</th>
+                            <th>03-01</th>
+                            <th>24</th>
+                        </tr>
+                        <tr>
+                            <th>12</th>
+                            <th><a href="#">hihihi[20]</a></th>
+                            <th>관리자</th>
+                            <th>03-01</th>
+                            <th>24</th>
+                        </tr>
+                        <tr>
+                            <th>13</th>
+                            <th><a href="#">hihihi[20]</a></th>
+                            <th>관리자</th>
+                            <th>03-01</th>
+                            <th>24</th>
+                        </tr>
+                        <tr>
+                            <th>14</th>
+                            <th><a href="#">hihihi[20]</a></th>
+                            <th>관리자</th>
+                            <th>03-01</th>
+                            <th>24</th>
+                        </tr>
+                        <tr>
+                            <th>15</th>
+                            <th><a href="#">hihihi[20]</a></th>
+                            <th>관리자</th>
+                            <th>03-01</th>
+                            <th>24</th>
+                        </tr>
+                    </table>
+                    <div>
+                        <div class="pageno">
+                            <a>1</a>
+                            <a href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#">4</a>
+                            <a href="#">5</a>
+                            <a href="#">6</a>
+                            <a href="#">7</a>
+                            <a href="#">8</a>
+                            <a href="#">9</a>
+                            <a href="#">10</a>
+                            <a href="#">></a>
+                            <a href="#">>></a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <form action="search.html" method="post">
+                        <div class="searchcon">
+                            <select name="select">
+                                <option value="title">제목</option>
+                                <option value="writer">글쓴이</option>
+                                <option value="content">내용</option>
+                            </select>
+                            <input type="text" name="search">
+                            <input type="submit" value="검색">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p>COPYRIGHT ⓒ Lee's Cooperation</p>
+        </div>
+    </div>
+</body>
+
+</html>

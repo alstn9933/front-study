@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <style>
+        .menu{
+            width: 200px;
+            overflow: hidden;
+        }
+        .main>li>a{
+            text-decoration: none;
+            width: 80%;
+            height: 40px;
+            display: inline-block;
+            line-height: 40px;
+            padding-left: 15px;
+            color: white;
+            font-size: 120%;
+        }
+        .sub>li>a{
+            text-decoration: none;
+            width: 70%;
+            height: 40px;
+            display: inline-block;
+            line-height: 40px;
+            padding-left: 30px;
+            color: white;
+            font-size: 120%;
+        }
+        .main,.sub{
+            list-style: none;
+            background-color: black;
+            padding: 0;
+            margin: 0;
+        }
+        .sub{
+            display: none;
+            background-color: gray;
+        }
+        .main>li{
+            border-bottom: 1px solid white;
+            overflow: hidden;
+        }
+        .rot{
+            transform: rotate(45deg);
+            transition-duration: 0.5s;
+        }
+        .a{
+            float: right;
+            width: 10%;
+            height: 40px;
+            line-height: 40px;
+            display: inline-block;
+            font-size: 120%;
+            color: white;
+            text-align: center;
+            transition-duration: 0.5s;
+        }
+    </style>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+        $(function() {
+            var score = 0;
+            $(".star").mouseenter(function() {
+                score = 0;
+                var num = $(".star").index(this);
+                $(".star").each(function(index, item) {
+                    if (index <= num) {
+                        $(item).attr("src", "../imgs/star-on.png");
+                        score++;
+                    } else {
+                        $(item).attr("src", "../imgs/star-off.png");
+                    }
+                });
+            });
+            $(".star").click(function() {
+                $("span").html(score + "점");
+            });
+        });
+        
+        $(function(){
+            $(".sub").each(function(index,item){
+                $(this).parent().children("a").after("<div class='a'>+</div>");
+            });
+            
+            $("a").click(function(){
+                $(this).parent().children(".sub").slideToggle(200);
+                var cl = $(this).next().attr("class");
+                if(cl=="a"){
+                    $(this).next().addClass("rot");
+                }else{
+                    $(this).next().removeClass("rot");
+                }
+            });
+            
+        });
+    </script>
+</head>
+
+<body>
+    <h1>별점</h1>
+    <hr>
+    별점 :
+    <img class="star" src="../imgs/star-off.png">
+    <img class="star" src="../imgs/star-off.png">
+    <img class="star" src="../imgs/star-off.png">
+    <img class="star" src="../imgs/star-off.png">
+    <img class="star" src="../imgs/star-off.png">
+    <span></span>
+    <hr>
+    <div class="menu">
+        <ul class="main">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">JAVA</a></li>
+            <li><a href="#">Oracle</a></li>
+            <li><a href="#">FrontEnd</a>
+                <ul class="sub">
+                    <li><a href="#">HTML5</a></li>
+                    <li><a href="#">CSS3</a></li>
+                    <li><a href="#">javascript</a></li>
+                    <li><a href="#">jQuery</a>
+                        <ul class="sub">
+                            <li><a href="#">객체탐색</a></li>
+                            <li><a href="#">객체조작</a></li>
+                            <li><a href="#">이벤트</a></li>
+                            <li><a href="#">효과</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="li"><a href="#">Server</a></li>
+            <li class="li"><a href="#">Framework</a>
+                <ul class="sub">
+                    <li><a href="#">Mybatis</a></li>
+                    <li><a href="#">Spring</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

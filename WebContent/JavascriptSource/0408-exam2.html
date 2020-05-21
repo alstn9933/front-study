@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <script>
+        window.onload = function() {
+            var btn1 = document.getElementById("btn1");
+            var btn2 = document.getElementById("btn2");
+            btn1.onclick = function() {
+                alert("버튼1 클릭");
+            }
+            btn2.onclick = function() {
+                alert("버튼2 클릭");
+                btn1.onclick = null;
+            }
+            var div1 = document.getElementById("div1");
+
+            div1.addEventListener("mouseenter", function() {
+                div1.innerHTML += "hi<br>";
+            });
+        }
+        function test1(msg){
+            alert(msg);
+            window.event.stopPropagation();
+            window.event.cancelBubble=true;//익스플로러에서 쓸것
+        }
+        function test2(){
+            alert("네이버로 이동합니다");
+            if(confirm("가시겠습니까?")){
+                location.href="http://www.naver.com";
+            }else{
+                alert("이동 취소");
+            }
+        }
+        function test3(){
+            var pw1 = document.getElementById("pw1").value;
+            var pw2 = document.getElementById("pw2").value;
+            if(pw1 != pw2){
+                return false;  
+            }
+        }
+    </script>
+    <style>
+        .div-test {
+            border: 1px solid black;
+            padding: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <button id="btn1">버튼1</button>
+    <button id="btn2">버튼2</button>
+    <hr>
+    <div id="div1" style="border:1px solid black;width:100px;height:100px">div</div>
+    <hr>
+    <div onclick="test1('빨강');" class="div-test" style="background: red;">
+        <div onclick="test1('노랑');" class="div-test" style="background: yellow;">
+            <div onclick="test1('파랑');" class="div-test" style="background: blue;"></div>
+        </div>
+    </div>
+    <hr>
+    <a href="javascript:void(0);" onclick="test2();">안녕</a>
+    <hr>
+    <form action="test.html" onsubmit="return test3();">
+        아이디: <input type="text" id="id">
+        <br>
+        비밀번호 : <input type="text" id="pw1">
+        <br>
+        비밀번호 확인 : <input type="text" id="pw2">
+        <br>
+        <input type="submit" value="제출">
+        <!--onclick="return test3();"-->
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-3.3.1.js"></script>
+    <style>
+        .sub{
+            display: none;
+        }
+        #div1{
+            width: 50px;
+            height: 50px;
+            background-color: black;
+        }
+        .orangered{
+            width: 50px;
+            height: 50px;
+            background-color: orangered;
+            position: relative;
+        }
+    </style>
+    <script>
+        $(function(){
+            $("#main>li").click(function(){
+                    //toggle/slideToggle
+                $(this).children().fadeToggle(500);
+            });
+            $("#divBtn1").click(function(){
+                $("#div1").animate({height: '300px',width:'300px',opacity:'0.4'});
+            });
+            $("#divBtn2").click(function(){
+                $("#div1").animate({height:'50px',width:'50px',opacity:'1'});
+            });
+            $("#orangeBtn").click(function(){
+                $(".orangered").each(function(index){
+                    $(this).delay(index*50).animate({left:500});
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <ul id="main">
+        <li>main-1</li>
+        <li>main-2
+            <ul class="sub">
+                <li>sub-1</li>
+                <li>sub-2</li>
+                <li>sub-3</li>
+            </ul>
+        </li>
+        <li>main-3
+            <ul class="sub">
+                <li>sub-1</li>
+                <li>sub-2</li>
+                <li>sub-3</li>
+            </ul>
+        </li>
+    </ul>
+    <hr>
+    <div id="div1"></div>
+    <button id="divBtn1">클릭</button>
+    <button id="divBtn2">클릭</button>
+    <hr>
+    <div class="orangered"></div>
+    <div class="orangered"></div>
+    <div class="orangered"></div>
+    <div class="orangered"></div>
+    <div class="orangered"></div>
+    <div class="orangered"></div>
+    <div class="orangered"></div>
+    <button id="orangeBtn">클릭</button>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+    <style>
+       /* p{
+            color: blue;
+        }
+        #p1 {
+            background: yellow;
+        }
+        .c1{
+            background: yellow;
+        }
+        .c2{
+            color: red;
+        }
+        p[id="p4"]{
+            background: red;
+        }
+        div>h1{
+            background: blue;
+        }
+        div a{
+            color: red;
+        }*/
+        #d1>h1+p{
+            color: red;
+        }
+        #d1>h1~p{
+            background: green;
+        }
+        #d2,#d3{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+        #d2:hover{
+            background: yellow;
+        }
+        #d3:active{
+            background: red;
+        }
+        input:focus{
+            background: red;
+        }
+        input:checked{
+            height: 30px;
+            width: 30px;
+        }
+        input:enabled{
+            background: cyan;
+        }
+        input:disabled{
+            background: black;
+        }
+    </style>
+</head>
+<body>
+    <!--<h1 id="h1" class="c2">테스트문구1</h1>
+    <h2>테스트문구2</h2>
+    <h3>테스트문구3</h3>
+    <p class="c1 c2">테스트문구4</p>
+    <p>테스트문구5</p>
+    <p>테스트문구6</p>
+    <h1>테스트문구7</h1>-->
+    <p id="p4">테스트문구8</p>
+    <a>외부a태그</a>
+    <div>
+        <h1>hi</h1>
+        <div>
+            <h1>hi~</h1>
+        </div>
+        <h2>hello</h2>
+        <ul>
+            <li>테스트1</li>
+            <li><a>테스트2</a></li>
+        </ul>
+    </div>
+    <div id="d1">
+        <h1>제목</h1>
+        <p>내용1</p>
+        <p>내용2</p>
+        <p>내용3</p>
+    </div>
+    
+    <div id="d2">d2</div>
+    <div id="d3">d3</div>
+    
+    <form action="/test.html" method="get">
+        <fieldset>
+            <legend>회원가입</legend>
+            ID: <input type="text" name="id"><br>
+            PW: <input type="password" name="pw" disabled><br>
+            NAME: <input type="text" name="name"><br>
+            성별: <input type="radio" name="gender" value="남">남자
+            <input type="radio" name="gender" value="여">여자<br>
+            <input type="submit" value="가입하기">
+        </fieldset>
+    </form>
+</body>
+</html>

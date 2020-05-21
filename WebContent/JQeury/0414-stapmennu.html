@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <style>
+        .tapmenu {
+            width: 1000px;
+            margin: 0 auto;
+            overflow: hidden;
+            background-color: #f5f5f5;
+        }
+
+        h2,
+        h5 {
+            margin: 2px;
+        }
+
+        .main {
+            padding: 0;
+            list-style: none;
+            margin: 0;
+            overflow: hidden;
+            border: 1px solid #e4e4e4;
+        }
+
+        .main>li {
+            border-top-right-radius: 32px;
+            border-bottom-right-radius: 32px;
+            float: left;
+            text-decoration: none;
+            width: 230px;
+            height: 80px;
+            font-weight: bold;
+            overflow: hidden;
+            margin: 5px;
+        }
+
+        .main>li:hover {
+            cursor: pointer;
+        }
+
+        .disel {
+            background-color: #e4e4e4;
+            color: dodgerblue;
+        }
+
+        .sel {
+            background-color: darkorange;
+            color: white;
+        }
+
+        .ssel {
+            background-color: dodgerblue;
+        }
+
+        .sub {
+            width: 100%;
+            color: dodgerblue;
+            top: 200px;
+            display: none;
+            padding: 15px;
+            box-sizing: border-box;
+            border: 1px solid #e4e4e4;
+            height: 400px;
+        }
+
+        button {
+            float: left;
+            background-color: black;
+            border: none;
+            color: white;
+            width: 80px;
+            height: 25px;
+            margin: 10px;
+            border-radius: 5px;
+            text-align: center;
+            line-height: 25px;
+            padding: 0;
+        }
+
+        .next {
+            float: right;
+        }
+
+        input {
+            display: inline-block;
+            margin-left: 800px;
+            display: none;
+        }
+
+    </style>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+        $(function() {
+            var curr=0;
+            var arr = $("li").length;
+            $("li").click(function() {
+                var ind = $("li").index(this);
+                if ($(this).prev().hasClass("sel") || ind == 0) {
+                    curr=ind;
+                    $("li").each(function(index, item) {
+                        if (index >= curr) {
+                            $(item).removeClass("sel ssel");
+                        }
+                    });
+                    $(".sub").hide();
+                    $(this).addClass("sel");
+                    $(this).prev().addClass("ssel");
+                    $(".sub").eq(curr).show();
+                    if (curr == 0) {
+                        $(".back").hide();
+                    } else {
+                        $(".back").show();
+                    }
+                    if (curr == arr - 1) {
+                        $(".next").html("done");
+                    } else {
+                        $(".next").html("Next &gt;");
+                    }
+                }
+            });
+            $(".next").click(function() {
+                $("li").eq(curr + 1).click();
+            });
+            $(".back").click(function() {
+                $("li").eq(curr - 1).click();
+            });
+            $("li").eq(0).click();
+        });
+
+    </script>
+</head>
+
+<body>
+    <h1>탭메뉴 만들기</h1>
+    <hr>
+    <br>
+    <div class="tapmenu">
+        <ul class="main">
+            <li class="disel">
+                <h2>Step1</h2>
+                <h5>HTML5</h5>
+            </li>
+            <li class="disel">
+                <h2>Step2</h2>
+                <h5>CSS</h5>
+            </li>
+            <li class="disel">
+                <h2>Step3</h2>
+                <h5>Javascript</h5>
+            </li>
+            <li class="disel">
+                <h2>Step4</h2>
+                <h5>jQeury</h5>
+            </li>
+        </ul>
+        <div class="sub">
+            <h2>HTML5</h2>
+            <hr>
+            <p>W3C가 발표하는 HTML의 최신 버전으로, 2014년 10월 28일 완전히 표준화되었다. XHTML에서 다시 HTML로 회귀하게 되었다. 따라서 HTML5는 XHTML의 상위 버전이 아니라, HTML4.01의 상위 버전이다. 완전히 XHTML 문법을 버린 것은 아니고 선택적으로 이용할 수 있게 되어있다. 어도비 플래시나 실버라이트 등의 플러그인을 기반으로 하는 응용 프로그램에 대한 필요성을 줄이는 것에 초점을 맞추고 있다. 이러한 방향성 덕분에 한국에서는 웹 표준에 대한 문제가 이슈로 떠오르면서 함께 주목을 받기도 하였다.<br>
+                HTML5라는 말은 의미가 넓어져, 꼭 W3C의 HTML5 표준만이 아닌 최신 웹 기술(HTML Living Standard, CSS3+, ECMAScript 6+ 등)을 통틀어 칭하기도 한다. HTML5가 상용화되면서 어도비 플래시는 지원 중단 절차를 밟게 되었다.</p>
+        </div>
+        <div class="sub">
+            <h2>CSS</h2>
+            <hr>
+            <p>HTML 등의 마크업 언어로 작성된 문서가 실제로 웹사이트에 표현되는 방법을 정해주는 언어.<br>
+                CSS의 C가 Cascading의 약자인데, 이는 상위 요소의 스타일 속성을 자손 요소들에게 상속시켜주는 모습이 DOM 트리구조에서 마치 폭포수처럼 내려가는 모습을 닮았기 때문이다.</p>
+        </div>
+        <div class="sub">
+            <h2>Javascript</h2>
+            <hr>
+            <p>프로토타입기반의 객체지향 프로그래밍 언어로, 스크립트 언어에 해당된다. 특수한 목적이 아닌 이상 모든 웹 브라우저에 인터프리터가 내장되어 있다. 오늘날 HTML, CSS와 함께 웹을 구성하는 요소 중 하나다. HTML이 웹 페이지의 기본 구조를 담당하고, CSS가 디자인을 담당한다면 JavaScript는 클라이언트 단에서 웹 페이지가 동작하는 것을 담당한다.[1] 웹 페이지를 자동차에 비유하자면, HTML은 자동차의 뼈대, CSS는 자동차의 외관, JavaScript는 자동차의 동력이라고 볼 수 있다.<br>
+                썬 마이크로시스템즈(현재 오라클)에서 개발한 Java와는 별 관계가 없는 언어이다. 이름이 비슷하다고 같은 언어가 아니다. 사람들이 흔히 헷갈리는 부분 중 하나. 실질적인 구동 방식도 JVM을 이용해서 돌리는 Java와, 브라우저 내에 스크립트 엔진(인터프리터)이 존재하는 JavaScript는 완전히 다르다. 햄이랑 햄스터가 다르고, 인도가 인도네시아와 다르듯 심지어는 웹 서버용 파생 규격도 다르다.<br>
+                JavaScript는 C에서 영향을 받은 C-Family 언어로 기본적인 문법이 유사 중괄호로 구분하는 블럭, 세미콜론으로 줄이 끝남을 알리는 것[2], 변수 쓰는 법, 연산자 사용법 등 기초적인 문법이 C 문법과 크게 다르지 않다.</p>
+        </div>
+        <div class="sub">
+            <h2>jQuery</h2>
+            <hr>
+            <p>jQuery는 HTML 속 클라이언트 사이드 스크립트 언어를 단순화하도록 설계된 브라우저 호환성이 있는 JavaScript 라이브러리이다. 존 레식에 의해 2006년 뉴욕 시 바캠프(Barcamp NYC)에서 공식적으로 소개되었다. 현재 가장 인기 있는 JavaScript 라이브러리이며 표준에 가까운 점유율을 자랑한다.</p>
+        </div>
+        <div>
+            <button class="back">&lt; Back</button>
+            <button class="next">Next &gt;</button>
+        </div>
+    </div>
+</body>
+
+</html>

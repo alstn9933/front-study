@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <script>
+        function test() {
+            alert("인터널 hi1");
+            aletr("인터널 hi");
+            alert("인터널 hi2");
+        }
+
+        function test1() {
+            alert("익스터널방식 hi");
+        }
+
+        function func1() {
+            document.write("<h1>추가</h1>");
+        }
+
+        function func2() {
+            console.log("로그");
+        }
+
+        function func3() {
+            var gh = confirm("집에 가시겠습니까?");
+            if (gh) {
+                alert("집에가자");
+            } else {
+                alert("집에못간다");
+            }
+        }
+
+        function func4() {
+            var msg = prompt("할말 입력");
+            alert(msg);
+        }
+
+        function idTest() {
+            var p1 = document.getElementById("p1");
+            /*alert(p1.innerHTML);
+            alert(p1.id);
+            alert(p1.outerHTML);*/
+            p1.innerHTML = 'ㅇㅇㅇㅇ';
+            p1.style.color = 'red';
+        }
+
+        function classTest() {
+            var pp = document.getElementsByClassName("pp");
+            alert(pp[0].innerHTML);
+            alert(pp[1].innerHTML);
+            alert(pp[2].innerHTML);
+        }
+
+        function inputTest() {
+            var in1 = document.getElementById("in1");
+            in1.value = '12345';
+        }
+        function chkbox(){
+            var chk = document.getElementById("chk");
+            chk.checked=false;
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="javascript:alert('hi');">인라인방식</button>
+    <br>
+    <button onclick="test();">인터널방식</button>
+    <br>
+    <button onclick="test1();">익스터널방식</button>
+    <a href="#">링크</a>
+    <br>
+    <hr><br>
+    <button onclick="func1();">첫번째버튼</button>
+    <button onclick="func2();">두번째버튼</button>
+    <button onclick="func3();">세번째버튼</button>
+    <button onclick="func4();">네번째버튼</button>
+    <hr>
+    <p id="p1">id는 p1입니다.</p>
+    <button onclick="idTest();">클릭</button>
+    <hr>
+    <p class="pp">pp클래스1</p>
+    <p class="pp">pp클래스2</p>
+    <p class="pp">pp클래스3</p>
+    <button onclick="classTest()">클릭</button>
+    <hr>
+    <input id="in1" type="text" readonly>
+    <button onclick="inputTest();">클릭</button>
+    <hr>
+    <input type="checkbox" name="체크" value="체크1" id="chk">
+    <button onclick="chkbox();">클릭</button>
+</body>
+
+</html>

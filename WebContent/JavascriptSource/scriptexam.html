@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!-- saved from url=(0122)http://192.168.10.96:18080/%ea%b3%b5%ec%9c%a0%ed%8f%b4%eb%8d%94/06_javascript/%ec%8b%9c%ec%9e%91%20%ec%8b%a4%ec%8a%b5.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Insert title here</title>
+</head>
+
+<body>
+
+    <style>
+        div {
+            border: 1px solid red;
+            height: 100px;
+            width: 300px;
+        }
+
+    </style>
+    <script>
+        function myfunc1() {
+            var div1 = document.getElementById("div1");
+            div1.innerHTML='성공';
+        }
+        function myfunc2() {
+            var div2 = document.getElementById("test");
+            div2.value = '성공';
+        }
+        function myfunc3() {
+            var div3 = document.getElementById("span");
+            console.log(div3.innerHTML);
+        }
+
+    </script>
+    문제1. div 안에 있는 내용을 "성공" 으로 바꾸어 보세요 <br>
+    (JavaScript로만 바꾸는걸 잊지마세요!)
+    <div id="div1">
+        저를 바꾸어보세요^^
+    </div>
+    <button onclick="myfunc1();">도전</button>
+    <br><br>    
+
+    문제2. "바꿀수 있을까? 라는 문구를 "성공" 으로 바꾸어 보세요 <br>
+    <div id="div2">
+        <input type="text" id="test" value="바꿀수 있을까?">
+    </div>
+    <button onclick="myfunc2();">도전</button>
+    <br><br>
+    문제3. 해당 값을 읽어서 개발자도구 : 콘솔에 출력해보세요
+    <div id="div3">
+        <p id="p1">
+            <span id="span">저를 읽어서 콘솔에 출력해보세요</span>
+        </p>
+    </div>
+    <button onclick="myfunc3();">도전</button>    
+    
+
+
+
+
+
+
+</body></html>

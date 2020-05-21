@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <link href="defualt.css" rel="stylesheet" type="text/css">
+    <link href="color.css" rel="stylesheet" type="text/css">
+    <link href="car.css" rel="stylesheet" type="text/css">
+    <link href="sidebar.css" rel="stylesheet" type="text/css">
+    <style>
+        .main>li:nth-child(3)>ul>li:nth-child(2)>a {
+            background-color: rgba(0, 49, 139, 40%);
+        }
+
+        .sidebar>ul>li:nth-child(2) {
+            background-color: rgba(63, 97, 126, 40%);
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <a href="0401exam.html" class="t-4">THE CAR</a>
+        <ul class="menubar main">
+            <li><a href="0401exam.html">HOME</a></li>
+            <li><a href="#">COMPANIES</a>
+                <ul class="menubar sub">
+                    <li><a href="hyundai.html">HYUNDAI</a></li>
+                    <li><a href="#">KIA</a></li>
+                    <li><a href="#">BMW</a></li>
+                    <li><a href="#">AUDI</a></li>
+                </ul>
+            </li>
+            <li><a href="#">CARS</a>
+                <ul class="menubar sub">
+                    <li><a href="#">소형</a></li>
+                    <li><a>세단</a></li>
+                    <li><a href="#">스포츠</a></li>
+                    <li><a href="#">SUV</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <div class="content">
+            <div class="content1">
+                <div class="sidebar">
+                    <ul>
+                        <li><a href="#">소형</a></li>
+                        <li><a>세단</a></li>
+                        <li><a href="#">스포츠</a></li>
+                        <li><a href="#">SUV</a></li>
+                    </ul>
+                </div>
+                <div class="maincon">
+                    <div class="center">
+                        <div class="navi">
+                            <fieldset>
+                                <legend>상세분류</legend>
+                                <form action="#" method="get">
+                                    <table>
+                                        <tr>
+                                            <td>브랜드</td>
+                                            <td>가격</td>
+                                            <th rowspan="2"><input id="search" type="submit" value="검색"><label for="search"><img class="search" src="img/hiclipart.com.png"></label></th>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <select>
+                                                    <option value="ALL">ALL</option>
+                                                    <option value="HYUNDAI">HYUNDAI</option>
+                                                    <option value="HYUNDAI">KIA</option>
+                                                    <option value="HYUNDAI">BMW</option>
+                                                    <option value="HYUNDAI">AUDI</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <input type="number" name="minprice" min="0" step="1000" value="0">만원
+                                                ~<input type="number" name="maxprice" min="1000" step="1000">만원
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </form>
+                            </fieldset>
+                        </div>
+                        <h2 class="title">sedan</h2>
+                        <table>
+                            <tr>
+                                <th>제품명</th>
+                                <th>브랜드명</th>
+                                <th>이미지</th>
+                                <th>가격</th>
+                                <th>특징</th>
+                            </tr>
+                            <tr>
+                                <th><a href="https://auto.naver.com/car/lineup.nhn?yearsId=137863">2021 G80</a></th>
+                                <th>GENESIS</th>
+                                <th><img src="img/2021G80.png"></th>
+                                <th>5,247~6,187만원</th>
+                                <td>
+                                    <ul>
+                                        <li>연비 : 8.4~14.6km/l</li>
+                                        <li>연료 : 디젤, 가솔린</li>
+                                        <li>출력 : 210~380hp</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><a href="https://auto.naver.com/car/lineup.nhn?yearsId=129711">2019 소나타</a></th>
+                                <th>HYUNDAI</th>
+                                <th><img src="img/2019sonata.png"></th>
+                                <th>2,288~3,287만원</th>
+                                <td>
+                                    <ul>
+                                        <li>연비 : 9.8~13.7km/l</li>
+                                        <li>연료 : 가솔린, LPG</li>
+                                        <li>출력 : 146~180hp</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><a href="https://auto.naver.com/car/lineup.nhn?yearsId=130241">2020 K9</a></th>
+                                <th>KIA</th>
+                                <th><img src="img/2020K9.png"></th>
+                                <th>5,377~9,207만원</th>
+                                <td>
+                                    <ul>
+                                        <li>연비 : 7.5~9.0km/l</li>
+                                        <li>연료 : 가솔린</li>
+                                        <li>출력 : 315~425hp</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><a href="https://auto.naver.com/car/lineup.nhn?yearsId=125093">2019 BMW M5</a></th>
+                                <th>BMW</th>
+                                <th><img src="img/2019-BMW-M5.png"></th>
+                                <th>1억4,710~1억6,760만원</th>
+                                <td>
+                                    <ul>
+                                        <li>연비 : 7.1~8.1km/l</li>
+                                        <li>연료 : 가솔린</li>
+                                        <li>출력 : 608~625hp</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><a href="https://auto.naver.com/car/lineup.nhn?yearsId=134105">2020 AUDI A6</a></th>
+                                <th>AUDI</th>
+                                <th><img src="img/2020-AUDI-A6.png"></th>
+                                <th>6,650~7,200만원</th>
+                                <td>
+                                    <ul>
+                                        <li>연비 : 11.4~15.8km/l</li>
+                                        <li>연료 : 디젤, 가솔린</li>
+                                        <li>출력 : 204~252hp</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <h6>MINSOO</h6>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

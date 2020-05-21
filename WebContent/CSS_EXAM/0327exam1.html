@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+    <style>
+        .d{
+            width: 100px;
+            height: 100px;
+            border: 3px solid black;
+            display: inline-block;
+            margin: -2px;
+        }
+        th{
+            width: 100px;
+            height: 100px;
+            border: 3px solid black;
+        }
+        .c1{
+            border-color: blue;
+            border-top-left-radius: 30px;
+            border-right-style: dashed;
+            border-bottom-style: dashed;
+        }
+        .c2{
+            border-style: dashed;
+        }
+        .c3{
+            border-top-right-radius: 30px;
+            border-left-style: dashed;
+            border-bottom-style: dashed;
+            border-color: green;
+        }
+        .c5{
+            border-style: dotted;
+            border-color: violet;
+        }
+        .c7{
+            border-color: yellow;
+            border-top-style: dashed;
+            border-right-style: dashed;
+            border-bottom-left-radius: 30px;
+        }
+        .c9{
+            border-color: red;
+            border-top-style: dashed;
+            border-left-style: dashed;
+            border-bottom-right-radius: 30px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>테이블 사용</caption>
+        <tr class="r1">
+            <th class="c1"></th>
+            <th class="c2"></th>
+            <th class="c3"></th>
+        </tr>
+        <tr class="r2">
+            <th class="c2"></th>
+            <th class="c5"></th>
+            <th class="c2"></th>
+        </tr>
+        <tr class="r3">
+            <th class="c7"></th>
+            <th class="c2"></th>
+            <th class="c9"></th>
+        </tr>
+    </table>
+    <hr>
+    <p>div사용</p>
+    <div>
+        <div class="d c1"></div>
+        <div class="d c2"></div>
+        <div class="d c3"></div>
+    </div>
+    <div>
+        <div class="d c2"></div>
+        <div class="d c5"></div>
+        <div class="d c2"></div>
+    </div>
+    <div>
+        <div class="d c7"></div>
+        <div class="d c2"></div>
+        <div class="d c9"></div>
+    </div>
+</body>
+</html>

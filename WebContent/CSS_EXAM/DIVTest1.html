@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <style>
+        div {
+            box-sizing: border-box;
+        }
+
+        .wrapper {
+            margin: 0 auto;
+            width: 1280px;
+        }
+
+        .htop {
+            overflow: hidden;
+        }
+
+        .htop>div {
+            height: 150px;
+            float: left;
+        }
+
+        .hleft {
+            width: 20%;
+            background-color: aqua;
+        }
+
+        .hmiddle {
+            width: 60%;
+            background-color: aquamarine;
+        }
+
+        .login {
+            width: 20%;
+            background-color: cornflowerblue;
+            background: linear-gradient(135deg, #e3fdf5, #e3fdf5 50%, #ffe6fa 50%, #ffe6fa 100%);
+            border-radius: 10px;
+            text-align: center;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .login>p {
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: 100%;
+            margin: 5px;
+        }
+
+        .login>form input {
+            font-family: 'Noto Sans KR', sans-serif;
+            border: 0px;
+            width: 60%;
+            font-size: 100%;
+            line-height: 100%;
+            margin: 3px;
+            border-radius: 15px;
+        }
+        .login>form>div{
+            float: left;
+        }
+        .login>form>.d1{
+            
+        }
+
+        .sub {
+            height: 20px;
+            background-color: white;
+        }
+
+        .login>.d3 {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .login>.d3>a {
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: bold;
+            text-decoration: none;
+            color: #333;
+            background-color: #a8edea;
+            text-align: center;
+            border-radius: 15px;
+            font-size: 13px;
+        }
+
+        .hbottom {
+            height: 50px;
+        }
+
+        .content {
+            overflow: hidden;
+        }
+
+        .content>div {
+            float: left;
+        }
+
+        .layer1 {
+            width: 15%;
+            background-color: coral;
+            height: 400px;
+        }
+
+        .layer2 {
+            width: 65%;
+            background-color: darkgray;
+            height: 500px;
+        }
+
+        .layer3 {
+            width: 65%;
+            background-color: darkgray;
+            height: 300px;
+        }
+
+        .footer {
+            height: 150px;
+            background-color: deeppink;
+        }
+
+        .navi {
+            width: 1280px;
+            padding: 0;
+            list-style: none;
+            overflow: hidden;
+            border-radius: 5px;
+            margin: 0 auto;
+        }
+
+        .navi>li {
+            float: left;
+        }
+
+        .navi>li>a {
+            box-sizing: border-box;
+            width: calc(1280px/6);
+            height: 50px;
+            border-right: 1px solid #eb8921;
+            background-color: #2e2f2f;
+            text-decoration: none;
+            color: #EB8921;
+            display: block;
+            text-align: center;
+            line-height: 50px;
+            text-shadow: 2px 2px 2px 2px #eb9821;
+        }
+
+        .navi>li:last-child>a {
+            border-right: none;
+            border-bottom-right-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .navi>li:first-child>a {
+            border-bottom-left-radius: 10px;
+            border-top-left-radius: 10px;
+        }
+
+        .navi>li>a:hover {
+            background-color: #eb8921;
+            color: #2e2f2f;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="htop">
+                <div class="hleft"></div>
+                <div class="hmiddle"></div>
+                <div class="login">
+                    <p>LOGIN</p>
+                    <form action="login.html" method="post">
+                        <div class="d1">
+                            <input class="email" type="email" name="email" placeholder="Input Your Email" required>
+                            <input class="pw" type="password" name="password" placeholder="Password" required>
+                        </div>
+                        <div class="d2">
+                            <input class="sub" type="submit" value="Log In">
+                        </div>
+                    </form>
+                    <div class="d3">
+                        <a href="forget.html">Forget Password</a>
+                        <a href="signup.html">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hbottom">
+                <ul class="navi">
+                    <li><a href="#">JAVA</a></li>
+                    <li><a href="#">ORACLE</a></li>
+                    <li><a href="#">HTML5</a></li>
+                    <li><a href="#">CSS3</a></li>
+                    <li><a href="#">javascropt</a></li>
+                    <li><a href="#">jQuery</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <div class="layer1"></div>
+            <div class="layer2"></div>
+            <div class="layer3"></div>
+        </div>
+        <div class="footer"></div>
+    </div>
+</body>
+
+</html>

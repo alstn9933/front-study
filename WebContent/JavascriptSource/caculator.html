@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+    <style>
+        .calc{
+            margin: 0 auto;
+            border: 2px solid blue;
+        }
+        .calc th>button{
+            width: 50px;
+            height: 50px;
+            font-size: 25px;
+            font-weight: bold;
+        }
+        .calc input[type="text"]{
+            border: 1px solid black;
+            height: 50px;;
+            width: 210px;
+            border: 1 solid black;
+            text-align: right;
+            font-size: 35px;
+            font-weight: bold;
+            overflow: visible;
+        }
+    </style>
+    <script>
+        var str = "0";
+        function calc(val){
+            var result = document.getElementById("result");
+            if(str.length>8){
+                result.style.fontSize="20px";
+            }
+            if(str.length>15){
+                result.style.fontSize="15px";
+            }
+            if(val.innerHTML=="="){
+                str=eval(str);
+            }else if(val.innerHTML=="AC"){
+                result.style.fontSize="35px";
+                str="0";
+            }else{
+                if(str=="0"&&val.innerHTML!="."){
+                    str=val.innerHTML;
+                }else{
+                    str += val.innerHTML;
+                }
+            }
+            result.value=str;
+        }
+    </script>
+</head>
+<body>
+    <h1>연습4</h1>
+    <p>계산기 만들기</p>
+    <hr>
+    <table class="calc">
+        <tr>
+            <th colspan="4"><input type="text" id="result" readonly></th>
+        </tr>
+        <tr>
+            <th><button onclick="calc(this);">(</button></th>
+            <th><button onclick="calc(this);">)</button></th>
+            <th><button onclick="calc(this);">%</button></th>
+            <th><button onclick="calc(this);">AC</button></th>
+        </tr>
+        <tr>
+            <th><button onclick="calc(this);">7</button></th>
+            <th><button onclick="calc(this);">8</button></th>
+            <th><button onclick="calc(this);">9</button></th>
+            <th><button onclick="calc(this);">/</button></th>
+        </tr>
+        <tr>
+            <th><button onclick="calc(this);">4</button></th>
+            <th><button onclick="calc(this);">5</button></th>
+            <th><button onclick="calc(this);">6</button></th>
+            <th><button onclick="calc(this);">*</button></th>
+        </tr>
+        <tr>
+            <th><button onclick="calc(this);">1</button></th>
+            <th><button onclick="calc(this);">2</button></th>
+            <th><button onclick="calc(this);">3</button></th>
+            <th><button onclick="calc(this);">-</button></th>
+        </tr>
+        <tr>
+            <th><button onclick="calc(this);">0</button></th>
+            <th><button onclick="calc(this);">.</button></th>
+            <th><button onclick="calc(this);">=</button></th>
+            <th><button onclick="calc(this);">+</button></th>
+        </tr>
+    </table>
+</body>
+</html>

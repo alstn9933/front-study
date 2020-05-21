@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <style>
+        .wrapper {
+            width: 1280px;
+            margin: 0 auto;
+            background-color: #1A2026;
+        }
+
+        .wrapper div {
+            box-sizing: border-box;
+        }
+
+        .header {
+            overflow: hidden;
+            background-color: #1A2026;
+        }
+
+        .header>div {
+            float: left;
+            height: 150px;
+            overflow: hidden;
+        }
+
+        .hleft {
+            width: 10%;
+        }
+
+        .hleft>img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .hcenter {
+            width: 70%;
+        }
+
+        .pagename {
+            height: 100px;
+        }
+
+        .pagename>h1 {
+            text-align: center;
+            line-height: 100px;
+            margin: 0px;
+            font-size: 400%;
+            color: aliceblue;
+            text-shadow: 3px 3px 3px #4D9AE1;
+        }
+
+        .menu {
+            height: 50px;
+        }
+
+        .menu>ul {
+            width: 100%;
+            list-style: none;
+            padding: 0;
+            margin: 0 auto;
+            height: 50px;
+        }
+
+        .menu>ul>li {
+            width: calc(100%/4);
+            float: left;
+        }
+
+        .menu>ul>li>a {
+            border: 2px solid aliceblue;
+            box-sizing: border-box;
+            text-align: center;
+            display: block;
+            height: 50px;
+            line-height: 50px;
+            text-decoration: none;
+            color: aliceblue;
+            text-shadow: 3px 3px 3px #4D9AE1;
+            font-weight: bold;
+            border-bottom: none;
+        }
+
+        .menu>ul>li:first-child>a {
+            border-top-left-radius: 10px;
+        }
+
+        .menu>ul>li:last-child>a {
+            border-top-right-radius: 10px;
+        }
+
+        .menu>ul>li:hover>a {
+            background-color: red;
+        }
+
+        .hright {
+            width: 20%;
+        }
+
+        .hright>a {
+            display: block;
+            width: 80%;
+            height: 40px;
+            border: 2px solid aliceblue;
+            color: aliceblue;
+            text-shadow: 1px 1px 1px #4D9AE1;
+            text-align: center;
+            line-height: 40px;
+            margin: 20px;
+            border-radius: 5px;
+            box-shadow: 1px 1px 1px #4D9AE1;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .content {
+            overflow: hidden;
+            background-color: white;
+        }
+
+        .content>div {
+            float: left;
+        }
+
+        .ad {
+            background-color: white;
+            width: 20%;
+        }
+
+        .ad>img {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .ad>p {
+            height: 20px;
+            margin-top: 5px;
+            text-align: center;
+        }
+
+        .content1 {
+            width: 80%;
+            background-color: aliceblue;
+        }
+
+        .content1>p {
+            text-align: center;
+            margin: 30px;
+            font-weight: bold;
+            font-size: 130%;
+        }
+
+        .signup {
+            width: 70%;
+            margin: 0 auto;
+            border-top: 2px solid red;
+        }
+        .signup tr{
+            height: 50px;
+        }
+        .signup tr:first-of-type>td:first-child{
+            width: 200px;
+        }
+        .signup tr:first-of-type>td:last-of-type{
+            width: 150px;
+        }
+        .signup input{
+            display: inline-block;
+            width: 99%;
+            height: 40px;
+        }
+        .signup select{
+            width: 100px;
+            height: 40px;
+            font-size: 130%;
+        }
+        #addr{
+            width: 100px;
+        }
+        .addrs>td>a{
+            background-color: #65AEAF;
+            display: inline-block;
+            width: 150px;
+            height: 45px;
+            line-height: 45px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            margin: 5px;
+            font-weight: bold;
+            font-size: 120%;
+        }
+        .phone>td>input{
+            width: 100px;
+        }
+        .gender>td>label{
+            display: inline-block;
+            width: 150px;
+            height: 40px;
+            line-height: 40px;
+            background: gray;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+        }
+        .gender input:checked+label{
+            background-color: #65AEAF;
+        }
+        .gender input{
+            display: none;
+        }
+        .check>td>input{
+            height: 20px;
+            width: 20px;
+        }
+        .sub{
+            width: 310px;
+            margin: 0 auto;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        .sub>input{
+            width: 150px;
+            height: 40px;
+            background-color: #65AEAF;
+            border: 0;
+            margin: 0;
+            color: white;
+            font-weight: bold;
+        }
+        .footer {
+            height: 150px;
+            overflow: hidden;
+        }
+
+        .footer>p {
+            color: aliceblue;
+            text-shadow: 1px 1px 1px #4D9AE1;
+            margin: 0;
+            text-align: center;
+            line-height: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="hleft"><img src="../WebContent/imgs/dora.png"></div>
+            <div class="hcenter">
+                <div class="pagename">
+                    <h1>Welcom To Lee's World</h1>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">JAVA</a></li>
+                        <li><a href="#">ORACLE</a></li>
+                        <li><a href="#">HTML/CSS3</a></li>
+                        <li><a href="#">게시판</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="hright">
+                <a href="CSS_EXAM/css_login.html">로그인</a>
+                <a href="#">회원가입</a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="ad">
+                <img src="imgs/ad1.jpg">
+                <p>광고는 처음이지</p>
+                <img src="imgs/ad2.jpg">
+                <p>광고 4딸라</p>
+            </div>
+            <div class="content1">
+                <p>회원가입</p>
+                <form action="login.html" method="post">
+                    <table class="signup">
+                        <tr>
+                            <td>아이디</td>
+                            <td><input type="text" name="id" required></td>
+                            <td>4~12자리 영/숫자</td>
+                        </tr>
+                        <tr>
+                            <td>비밀번호</td>
+                            <td><input type="password" name="pw1" required></td>
+                            <td>8자리 이상</td>
+                        </tr>
+                        <tr>
+                            <td>비밀번호확인</td>
+                            <td><input type="password" name="pw2" required></td>
+                        </tr>
+                        <tr>
+                            <td>이름</td>
+                            <td><input type="text" name="name" required></td>
+                        </tr>
+                        <tr class="addrs">
+                            <td>우편번호</td>
+                            <td><input id="addr" type="text" name="zipcode" disabled><a href="#">우편번호 찾기</a></td>
+                        </tr>
+                        <tr>
+                            <td>주소</td>
+                            <td><input type="text" name="addr1"></td>
+                        </tr>
+                        <tr>
+                            <td>상세주소</td>
+                            <td><input type="text" name="addr2"></td>
+                        </tr>
+                        <tr class="phone">
+                            <td>전화번호</td>
+                            <td>
+                                <select name="phone1">
+                                    <option value="010">010</option>
+                                    <option value="011">011</option>
+                                    <option value="02">02</option>
+                                    <option value="070">070</option>
+                                </select>
+                                -
+                                <input type="text" name="phone2">-
+                                <input type="text" name="phone3">
+                            </td>
+                        </tr>
+                        <tr class="gender">
+                            <td>성별</td>
+                            <td>
+                                <input type="radio" name="gender" value="M" id="gender1"><label for="gender1">남자</label>
+                                <input type="radio" name="gender" value="F" id="gender2"><label for="gender2">여자</label>
+                            </td>
+                        </tr>
+                        <tr class="check">
+                            <td>약관동의</td>
+                            <td colspan="2">
+                                <input type="checkbox" name="check" value="check1">사이트 이용 약관(필수)
+                                <input type="checkbox" name="check" value="check2">개인정보 처리 약관(선택)
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="sub">
+                        <input type="submit" value="회원가입">
+                        <input type="reset" value="취소">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="footer">
+            <p>COPYRIGHT ⓒ Lee's Cooperation</p>
+        </div>
+    </div>
+</body>
+
+</html>

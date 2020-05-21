@@ -1,0 +1,31 @@
+@charset "UTF-8";
+.sidebar{
+    border-right: 1px solid rgba(63,97,126,50%);
+    width: 150px;
+    box-sizing: border-box;
+    float: left;
+}
+.sidebar>ul{
+    margin-top: 50px;
+    list-style: none;
+    padding: 0;
+}
+.sidebar>ul>li{
+    width: 150px;
+    height: 50px;
+}
+.sidebar>ul>li>a{
+    text-decoration: none;
+    color: black;
+    margin-left: 20px;
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    font-weight: bold;
+}
+.sidebar>ul>li:hover{
+    background-color: rgba(63,97,126,40%);
+}
+.sidebar>ul>li:hover>a{
+    color: aliceblue;
+}

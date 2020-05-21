@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+    <script>
+        function test1(){
+            var arr1 = [1,2,3,4,5];
+            console.log(arr1);
+            var arr2 = [1,"문자",arr1,true];
+            console.log(arr2);
+            var arr3 = new Array();
+            console.log(arr3);
+            arr3.push(1);
+            arr3.push(true);
+            arr3.push(arr2);
+            console.log(arr3);
+            var arr4 = new Array(3);
+            console.log(arr4);
+            arr4.push("Test");
+            console.log(arr4);
+            arr4[0] = 1;
+            arr4[1] = "Test1";
+            console.log(arr4);
+        }
+        function test2(){
+            var fruits = ['사과','키위','메론','망고'];
+            var fruit = document.getElementById("in1").value;
+            var result = fruits.indexOf(fruit);
+            alert(result);
+        }
+        function test3(){
+            var arr1 = [1,2,3,4];
+            var arr2 = ['가', '나', '다', '라'];
+            var arr3 = ["a","b","c","d"];
+            var result = arr1.concat(arr2,arr3);
+            console.log(result);
+        }
+        function test4(){
+            var arr1 = [1,2,3,4];
+            var arr2 = ['가', '나', '다', '라'];
+            var arr3 = ["a","b","c","d"];
+            var result = arr1.concat(arr2,arr3);
+            var joinResult = result.join(" ");
+            console.log(joinResult);
+        }
+        function test5(){
+            var arr1 = [1,2,3,4,5];
+            var arr2 = [1,2,3,4,5];
+            arr2.reverse();
+            console.log(arr1);
+            console.log(arr2);
+        }
+        function test6(){
+            var arr = [1,2,5,7,3,4,9,10,8,6];
+            arr.sort();
+            console.log(arr);
+            arr.sort(sortASC);
+            console.log(arr);
+            arr.sort(sortDESC);
+            console.log(arr);
+        }
+        function sortASC(a,b){
+            return a-b;
+        }
+        function sortDESC(a,b){
+            return b-a;
+        }
+        function test7(){
+            var arr = [1,2,3];
+            console.log(arr);
+            arr.push(4);
+            arr.push(5);
+            console.log(arr);
+            arr.pop();
+            console.log(arr);
+            arr.push(6);
+            console.log(arr);
+            arr.unshift(10);
+            arr.unshift(11);
+            console.log(arr);
+            arr.shift();
+            console.log(arr);
+            console.log(arr.toString());
+        }
+        function test8(){
+            var arr= ["서동건","영어공부","언제할래","안하다가","큰일난다"];
+            var sl1 = arr.slice(1);//시작점부터 두개 잘라냄
+            console.log(arr);
+            console.log(sl1);
+            var sl2 = arr.slice(1,3);//시작점부터 한개 잘라내고 3번인덱스부터 잘라냄
+            console.log(sl2);
+        }
+        function test9(){
+            var arr= ["서동건","영어공부","언제할래","안하다가","큰일난다"];
+            var result = arr.splice(1,3,"DB공부");//1번부터 두개를 잘라내 가져오고 원본의 잘라낸 자리에 값 추가
+            console.log(result);
+            console.log(arr);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="test1();">클릭</button>
+    <br>
+    <input type = "text" id="in1" placeholder="과일을 입력하세요">
+    <button onclick="test2();">indexOf테스트</button>
+    <br>
+    <button onclick="test3();">concat테스트</button>
+    <br>
+    <button onclick="test4();">join테스트</button>
+    <br>
+    <button onclick="test5();">reverse테스트</button>
+    <br>
+    <button onclick="test6();">sort테스트</button>
+    <br>
+    <button onclick="test7();">push/pop/shift</button>
+    <br>
+    <button onclick="test8();">slice</button>
+    <br>
+    <button onclick="test9();">splice</button>
+</body>
+</html>

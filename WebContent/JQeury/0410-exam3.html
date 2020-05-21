@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!-- saved from url=(0137)http://192.168.10.96:18080/%ea%b3%b5%ec%9c%a0%ed%8f%b4%eb%8d%94/07_jQuery/%ea%b0%9d%ec%b2%b4%ec%a1%b0%ec%9e%91%20%ec%8b%a4%ec%8a%b53.html -->
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Insert title here</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+        var color;
+        $(function() {
+            $("div").click(function() {
+                var index = $("div").index($(this));
+                if(index<2){
+                    color = $(this).css("background-color");
+                }else{
+                    $(this).css("background-color",color);
+                }
+            });
+            $("#btn1").click(function() {
+                $("fieldset").last().children("div").removeAttr("style");
+            });
+            
+        })
+
+    </script>
+</head>
+
+<body>
+
+
+
+
+    <style>
+        div {
+            border: 2px solid black;
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+            float: left;
+        }
+
+    </style>
+
+    문제3<br>
+    다음 2개의 그림 중 선택한 후 복사 될 수 있도록 구현하여라 <br>
+    <fieldset style="width:300px; margin:30px">
+        <legend>2개의 그림 중 선택하시오.</legend>
+        <div id="img1" style="background-color:red;">
+
+        </div>
+        <div id="img2" style="background-color:blue;">
+
+        </div>
+    </fieldset>
+
+    <fieldset style="width:800px;  margin:30px">
+
+        <legend>복사되는 공간</legend>
+
+        <div id="div1">
+
+        </div>
+        <div id="div2">
+
+        </div>
+        <div id="div3">
+
+        </div>
+        <div id="div4">
+
+        </div>
+        <div id="div5">
+
+        </div>
+        <div id="div6">
+
+        </div>
+        <div id="div7">
+
+        </div>
+    </fieldset>
+
+
+
+    <button id="btn1"> 초기화 </button>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

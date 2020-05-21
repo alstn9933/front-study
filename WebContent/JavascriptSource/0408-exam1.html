@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <style>
+        #d3{
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+        /*var latitude;
+        var longitude;
+        window.onload = function() {
+            navigator.geolocation.getCurrentPosition(showLocation);
+        }
+
+        function showLocation(position) {
+            latitude = position.coords.latitude;
+            longitude = position.coords.longitude;
+        }
+
+        function latlong() {
+            console.log(latitude);
+            console.log(longitude);
+        }*/
+        function test1(){
+            //텍스트노드가 있는 문서 객체 생성
+            //요소노드 생성 -> 텍스트노드 생성 -> 요소노드에 텍스트노드 추가 -> HTML 문서에 추가
+            var text = document.getElementById("in1").value;
+            //요소노드 생성
+            var element = document.createElement("h1");
+            //텍스트노드 생성
+            var textNode = document.createTextNode(text);
+            //요소노드에 텍스트노드 추가
+            element.appendChild(textNode);
+            var d1 = document.getElementById("d1");
+            //html의 body의 d1에 요소노드 추가
+            d1.appendChild(element);
+        }
+        function test2(){
+            var imgTag = document.createElement("img");
+            imgTag.src = "../imgs/dog.jpg";
+            imgTag.width="300";
+            imgTag.height = "150";
+            //없는 속성의 경우 아래방식으로 입력불가
+            imgTag.myProperty="123";
+            //없는속성은 setAttribute로 입력가능
+            imgTag.setAttribute("myProperty", "123");
+            var d2 = document.getElementById("d2");
+            d2.appendChild(imgTag);
+        }
+        function test3(){
+            var d3 = document.getElementById("d3");
+            d3.style.border="1px solid red";
+            d3.style.backgroundColor="pink";
+            d3.style.borderRadius = "15px"
+        }
+        function test4(){
+            var element = document.createElement("h1");
+            var text = document.createTextNode("HOUSE");
+            element.className="house";
+            element.appendChild(text);
+            var d4 = document.getElementById("d4");
+            d4.appendChild(element);
+        }
+        function test5(){
+            var house = document.getElementsByClassName("house");
+            house[0].remove();
+        }
+        function test6(){
+            var d4 = document.getElementById("d4");
+            var house = document.getElementsByClassName("house");
+            d4.removeChild(house[0]);
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="latlong();">위경도</button>
+    <hr>
+    <div id="d1">
+    </div>
+    <input type="text" id="in1">
+    <button onclick="test1();">확인하기</button>
+    <hr>
+    <div id="d2"></div>
+    <button onclick="test2();">확인하기</button>
+    <hr>
+    <div id="d3"></div>
+    <button onclick="test3();">확인하기</button>
+    <hr>
+    <div id="d4"></div>
+    <button onclick="test4();">확인하기</button>
+    <hr>
+    <div id="d5"></div>
+    <button onclick="test5();">본인삭제</button>
+    <div id="d6"></div>
+    <button onclick="test6();">부모에서 삭제</button>
+</body>
+
+</html>

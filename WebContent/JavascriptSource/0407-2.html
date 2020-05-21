@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <style>
+        #p1,#p2,.pp {
+            border: 5px solid black;
+            height: 200px;
+            width: 500px;
+            font-size: 70px;
+            color: red;
+        }
+        .pp{
+            font-size: 20px;
+        }
+
+    </style>
+    <script>
+        window.onload = function() {
+            div1 = document.getElementById("div1");
+        }
+
+        function test1() {
+            window.open("http://www.naver.com", "_blank", "width=500,height=500");
+        }
+
+        function test2() {
+            var myWindow = window.open();
+            myWindow.alert("3초 후 페이지 폭파!!!");
+            window.setTimeout(function() {
+                myWindow.close();
+            }, 3000);
+        }
+        var id;
+
+        function test3() {
+            var p1 = document.getElementById("p1");
+            id =
+                window.setInterval(function() {
+                    var date = new Date();
+                    p1.innerHTML = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds() + "." + date.getMilliseconds();
+                }, 1);
+        }
+
+        function test4() {
+            window.clearInterval(id);
+        }
+        var intervalId;
+
+        function test5() {
+            var p2 = document.getElementById("p2");
+            var count = 0;
+            intervalId = window.setInterval(function() {
+                var date = new Date();
+                var ms = date.getMilliseconds();
+                p2.innerHTML = count + ":" + ms;
+                if (ms > 990) {
+                    count++;
+                }
+            }, 10);
+        }
+
+        function test6() {
+            window.clearInterval(intervalId);
+        }
+
+        function test7() {
+            div1.innerHTML = "버튼클릭함";
+        }
+        function test8(){
+            var p3 = document.getElementById("p3");
+            p3.innerHTML += "화면높이 : "+screen.height+"<br>";
+            p3.innerHTML += "화면너비 : "+screen.width+"<br>";
+            p3.innerHTML += "실제 사용가능 높이 : "+screen.availHeight+"<br>";
+            p3.innerHTML += "사용가능한 가능 너비 : "+screen.availWidth+"<br>";
+            p3.innerHTML += "사용 가능한 색상 : "+screen.colorDepth+"<br>";
+            p3.innerHTML += "픽셀당 비트 수 : "+screen.pixelDepth;
+        }
+        function up(){
+            location.hash= "top";
+        }
+        function down(){
+            location.hash= "bottom";
+        }
+        function moveNaver(){
+            location.href="http://www.naver.com";
+        }
+    </script>
+</head>
+
+<body>
+    <a name="top">아래로이동</a>
+    <button onclick="down();">아래로가기</button>
+    <hr>
+    <button onclick="test1();">네이버창열기</button>
+    <hr>
+    <p>setTimeout 함수</p>
+    <button onclick="test2();">실행확인</button>
+    <hr>
+    <p>setInterval 함수</p>
+    <p id="p1"></p>
+    <button onclick="test3();">실행확인</button>
+    <button onclick="test4();">정지</button>
+    <hr>
+    <p>스톱워치</p>
+    <p id="p2"></p>
+    <button onclick="test5();">시작</button>
+    <button onclick="test6();">중지</button>
+    <hr>
+    <div id="div1">test</div>
+    <button onclick="test7();">테스트</button>
+    <hr>
+    <p id="p3" class="pp"></p>
+    <button onclick="test8();">클릭</button>
+    <hr>
+    <a name="bottom">위로이동</a>
+    <button onclick="up();">위로가기</button>
+    <div id="div2" onclick="moveNaver();">네이버로 이동</div>
+</body>
+
+</html>

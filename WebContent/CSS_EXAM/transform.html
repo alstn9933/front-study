@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+    <style>
+        img{
+            width: 250px;
+            height: 250px;
+        }
+        .trans1:hover{
+            transform: translateX(100px);
+        }
+        .trans2:hover{
+            transform: translateY(100px);
+        }
+        .trans3:hover{
+            transform: translate(100px, 100px);
+        }
+        .trans4:hover{
+            transform: scaleX(2);
+        }
+        .trans5:hover{
+            transform: scaleY(2);
+        }
+        .trans6:hover{
+            transform: scale(1.5,1.5);
+            transition-duration: 1s;
+        }
+        .wrap{
+            width: 250px;
+            height: 250px;
+            border: 1px solid black;
+            overflow: hidden;
+        }
+        .trans7:hover{
+            transform:rotate(-36000deg);
+            transition-duration: 60s;
+        }
+        .div{
+            width: 150px;
+            height: 150px;
+            background-color: red;
+            border: 1px solid black;
+        }
+        .trans11{
+            transition-duration: 2s;
+        }
+        .trans11:hover{
+            background-color: yellow;
+        }
+        .trans12{
+            transition-property: background-color,transform,width,height;
+            transition-duration: 5s,3s,1s,1s;
+        }
+        .trans12:hover{
+            background-color: yellow;
+            transform: rotate(180deg);
+            width: 250px;
+            height: 250px;
+        }
+        .trans13{
+            transition-delay: 2s;
+            transition-duration: 3s;
+        }
+        .trans13:hover{
+            background-color: yellow;
+            transform: rotate(180deg);
+        }
+        .img1{
+            margin: 100px;
+            width: 300px;
+            height: 300px;
+            animation-name:ani1;
+            animation-duration: 1s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
+        @keyframes ani1{
+            from{
+                background-color: green;
+                border: 1px solid black;
+            }
+            to{
+                background-color: yellow;
+                border-radius: 50%;
+                transform: rotate(360deg);
+                border: 3px solid red;
+            }
+        }
+        .img0{
+            margin: 50px;
+            width: 200px;
+            height: 200px;
+            animation-name:ani0;
+            animation-duration: 0.1s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
+        @keyframes ani0{
+            0%{
+                
+            }
+            to{
+                transform: rotate(720deg);
+            }
+        }
+        .dd{
+            margin: 100px;
+            width: 300px;
+            height: 300px;
+            animation-name: ani2;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes ani2{
+            0%{
+                background-color: green;
+                border: 3px solid black;
+            }
+            30%{
+                transform: translate(100px, 100px);
+            }
+            50%{
+                background-color: hotpink;
+                transform: scale(1.2);
+                border: 3px solid yellow;
+            }
+            100%{
+                background-color: blue;
+                transform: rotate(45deg);
+                border: 3px solid red;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Transform</h1>
+    <h3>지정한 크기만큼 좌우이동</h3>
+    <img src="../imgs/flower1.PNG" class="trans1">
+    <hr>
+    <h3>지정한 크기만큼 상하이동</h3>
+    <img src="../imgs/flower2.PNG" class="trans2">
+    <hr>
+    <h3>지정한 크기만큼 상하좌우이동</h3>
+    <img src="../imgs/flower3.PNG" class="trans3">
+    <hr>
+    <h3>지정한 배율만큼 좌우확대</h3>
+    <img src="../imgs/flower1.PNG" class="trans4">
+    <hr>
+    <h3>지정한 배율만큼 상하확대</h3>
+    <img src="../imgs/flower2.PNG" class="trans5">
+    <hr>
+    <h3>지정한 비율만큼 상하좌우확대</h3>
+    <div class="wrap">
+        <img src="../imgs/flower3.PNG" class="trans6">
+    </div>
+    <hr>
+    <h3>지정한 각도만큼 회전</h3>
+    <div class="wrap">
+        <img src="../imgs/%ED%9A%8C%EC%A0%84%EA%B5%90%EC%B0%A8%EB%A1%9C3_%ED%91%9C%EC%A7%80%ED%8C%90%EC%9D%B4_%ED%99%94%EC%82%B4%ED%91%9C_%EB%B0%A9%ED%96%A5%EC%9C%BC%EB%A1%9C_%EC%9E%90%EB%8F%99%EC%B0%A8%EA%B0%80_%ED%9A%8C%EC%A0%84_%EC%A7%84%ED%96%89%ED%95%A0_%EA%B2%83%EC%9D%84_%EC%A7%80%EC%8B%9C%ED%95%98%EB%8A%94_%EA%B2%83.jpg" class="trans7">
+    </div>
+    <hr>
+    <br><br>
+    <h1>트랜지션</h1>
+    <h3>시간에 따른 속성 변화</h3>
+    <div class="div trans11"></div>
+    <hr>
+    <h3>여러 속성의 시간차 변화</h3>
+    <div class="div trans12"></div>
+    <hr>
+    <h3>시간 지연하기</h3>
+    <div class="div trans13"></div>
+    <hr>
+    <h1>애니메이션 적용</h1>
+    <h3>기본 애니메이션 적용</h3>
+    <img class="img1" src="../imgs/dora.png">
+    <img class="img0" src="../imgs/%ED%9A%8C%EC%A0%84%EA%B5%90%EC%B0%A8%EB%A1%9C3_%ED%91%9C%EC%A7%80%ED%8C%90%EC%9D%B4_%ED%99%94%EC%82%B4%ED%91%9C_%EB%B0%A9%ED%96%A5%EC%9C%BC%EB%A1%9C_%EC%9E%90%EB%8F%99%EC%B0%A8%EA%B0%80_%ED%9A%8C%EC%A0%84_%EC%A7%84%ED%96%89%ED%95%A0_%EA%B2%83%EC%9D%84_%EC%A7%80%EC%8B%9C%ED%95%98%EB%8A%94_%EA%B2%83.jpg">
+    <hr>
+    <h3>중간 단계 적용</h3>
+    <div class="dd"></div>
+</body>
+</html>
